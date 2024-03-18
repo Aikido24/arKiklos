@@ -13,6 +13,7 @@ function gameLoop() {
   function handleResize() {
     // Obtener el ancho y el alto de la pantalla después de la rotación
    // arjsComponent= `${arjsComponent} displayWidth: ${Math.floor(window.innerWidth*0.5)}; displayHeight: ${Math.floor(window.innerHeight*0.5)};`
+   console.log('handleResize')
 
   }
   window.addEventListener('resize', handleResize);
