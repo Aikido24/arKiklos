@@ -16,7 +16,7 @@ function gameLoop() {
    console.log('handleResize')
 
   }
-  window.addEventListener('resize', handleResize);
+  //window.addEventListener('resize', handleResize);
   window.addEventListener("camera-init", function () {
     // Muestra el contenido cuando se detecta el marcador
     //console.log(sound.components.sound)
