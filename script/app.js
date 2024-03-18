@@ -8,8 +8,8 @@ function gameLoop() {
   let scene = document.querySelector('a-scene');
   // Obtener el componente arjs de la escena
   let arjsComponent = scene.getAttribute('arjs');
-  arjsComponent.displayWidth = window.innerWidth*0.9;
-  arjsComponent.displayHeight = window.innerHeight*0.9;
+  arjsComponent.displayWidth = screen.width*0.7;
+  arjsComponent.displayHeight = screen.height*0.7;
   
   marker.addEventListener("markerFound", function () {
     // Muestra el contenido cuando se detecta el marcador
