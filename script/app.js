@@ -15,15 +15,21 @@ function gameLoop() {
     arjsComponent.displayWidth = Math.floor(window.innerWidth*0.5);
     arjsComponent.displayHeight = Math.floor(window.innerHeight*0.5);
 
-    // Mostrar los valores en la consola
-    console.log("Ancho de la pantalla: " + screenWidth + "px");
-    console.log("Alto de la pantalla: " + screenHeight + "px");
   }
   window.addEventListener('resize', handleResize);
+  window.addEventListener("camera-init", function () {
+    // Muestra el contenido cuando se detecta el marcador
+    //console.log(sound.components.sound)
+    arjsComponent.displayWidth = Math.floor(window.innerWidth*0.5);
+    arjsComponent.displayHeight = Math.floor(window.innerHeight*0.5);
+    arjsComponent= `${arjsComponent} displayWidth: ${Math.floor(window.innerWidth*0.5)}; displayHeight: ${Math.floor(window.innerHeight*0.5)};`
+    console.log('camera-init:', arjsComponent)
+   
+  });
   marker.addEventListener("markerFound", function () {
     // Muestra el contenido cuando se detecta el marcador
     //console.log(sound.components.sound)
-    console.log('arjsComponent:',arjsComponent)
+    console.log('arjsComponent:', arjsComponent)
     sound.components.sound.data.loop=true;
     sound.components.sound.playSound();
   });
