@@ -9,14 +9,14 @@
     <script src="./script/app.js"></script> 
     
   </head>
-  <body >
+  <body style="height: 100%; width: 100%; margin: 0; overflow: hidden;">
     <a-scene   embedded id="scene"  embedded arjs="patternRatio:0.80; sourceWidth:1280; sourceHeight:960; sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled:false">
       <a-assets>
         <audio id="miSonido" src="./photos/ESPACIAL.mp3" preload="auto" ></audio>
         <a-asset-item id="car" src="./photos/model.gltf"></a-asset-item>
       </a-assets>
 
-      <a-marker type='pattern' url="./photos/marker.patt">
+      <a-marker style="height: 100%; width: 100%; margin: 0; overflow: hidden;" type="pattern" url="./photos/marker.patt">
          <a-image
           id="profile"
           width="1"
@@ -43,5 +43,4 @@
       <a-entity camera  cursor="fuse: false; rayOrigin:mouse;"></a-entity>
     </a-scene>
   </body>
-  
 </html>
