@@ -10,7 +10,16 @@ function gameLoop() {
   let arjsComponent = scene.getAttribute('arjs');
   arjsComponent.displayWidth = window.innerWidth*0.5;
   arjsComponent.displayHeight = window.innerHeight*0.5;
-  
+  function handleResize() {
+    // Obtener el ancho y el alto de la pantalla después de la rotación
+    arjsComponent.displayWidth = window.innerWidth*0.5;
+    arjsComponent.displayHeight = window.innerHeight*0.5;
+
+    // Mostrar los valores en la consola
+    console.log("Ancho de la pantalla: " + screenWidth + "px");
+    console.log("Alto de la pantalla: " + screenHeight + "px");
+  }
+  window.addEventListener('resize', handleResize);
   marker.addEventListener("markerFound", function () {
     // Muestra el contenido cuando se detecta el marcador
     //console.log(sound.components.sound)
