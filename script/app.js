@@ -8,12 +8,12 @@ function gameLoop() {
   let scene = document.querySelector('a-scene');
   // Obtener el componente arjs de la escena
   let arjsComponent = scene.getAttribute('arjs');
-  arjsComponent.displayWidth = window.innerWidth*0.5;
-  arjsComponent.displayHeight = window.innerHeight*0.5;
+  arjsComponent.displayWidth = Math.floor(window.innerWidth*0.5);
+  arjsComponent.displayHeight = Math.floor(window.innerHeight*0.5);
   function handleResize() {
     // Obtener el ancho y el alto de la pantalla después de la rotación
-    arjsComponent.displayWidth = window.innerWidth*0.5;
-    arjsComponent.displayHeight = window.innerHeight*0.5;
+    arjsComponent.displayWidth = Math.floor(window.innerWidth*0.5);
+    arjsComponent.displayHeight = Math.floor(window.innerHeight*0.5);
 
     // Mostrar los valores en la consola
     console.log("Ancho de la pantalla: " + screenWidth + "px");
