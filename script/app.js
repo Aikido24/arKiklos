@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", gameLoop);
 let arjsComponent;
 
 function gameLoop() {
+  console.log(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
   // Verificar si el dispositivo es móvil
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // Verificar si el navegador admite la API de Screen Orientation
@@ -13,7 +14,7 @@ function gameLoop() {
   let marker = document.querySelector("a-marker");
   let sound = document.querySelector('[sound]');
   let scene = document.querySelector('a-scene');
-  
+  let videoElement = document.getElementById('arjs-video');
   function handleResize() {
     // Verificar si la pantalla está en orientación apaisada
     const isLandscape = window.innerWidth > window.innerHeight;
@@ -26,12 +27,21 @@ function gameLoop() {
   }
 
   //window.addEventListener('resize', handleResize);
+  window.addEventListener("arjs-video-loaded", function () {
+    
+    
 
+    // Cambiar el ancho y el alto del elemento de vídeo
+    videoElement.style.width = '414px'; // Cambiar el ancho al 100% del contenedor
+    videoElement.style.height = '896px';
+     // Cambiar la altura al 100% del contenedor
+  });
   window.addEventListener("camera-init", function () {
     // Ajustar el tamaño de la pantalla inicialmente
     console.log('marker:',Object.keys(scene))
     console.log('marker:',scene.canvas)
     handleResize();
+
   });
 
   marker.addEventListener("markerFound", function () {

@@ -7,10 +7,33 @@
     <script src="./script/aframe.min.js"></script>
     <script src="./script/aframe-ar.js"></script>
     <script src="./script/app.js"></script> 
+    <style>
+      .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     
+      .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+      }
+      .arjs-video{
+        height: 100% !important;
+        width: 100% !important;
+      }
+    </style>
   </head>
-  <body style="height: 100%; width: 100%; margin: 0; overflow: hidden;">
-    <a-scene   embedded id="scene"  embedded arjs="patternRatio:0.80; sourceWidth:1280; sourceHeight:960; sourceType: webcam;debugUIEnabled: false;" vr-mode-ui="enabled:false">
+  <body >
+    <a-scene   embedded id="scene"  embedded arjs="patternRatio:0.80; sourceWidth:1280; sourceHeight:960; sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled:false">
       <a-assets>
         <audio id="miSonido" src="./photos/ESPACIAL.mp3" preload="auto" ></audio>
         <a-asset-item id="car" src="./photos/model.gltf"></a-asset-item>
