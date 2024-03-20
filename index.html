@@ -7,23 +7,35 @@
     <script src="./script/aframe.min.js"></script>
     <script src="./script/aframe-ar.js"></script>
     <script src="./script/app.js"></script> 
-    
+    <style>
+      #div-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        border-radius: 5%;
+      }
+    </style>
   </head>
   <body style="height: 100%; width: 100%; margin: 0; overflow: hidden;">
     <a-scene   embedded id="scene"  embedded arjs="patternRatio:0.80; sourceWidth:1280; sourceHeight:960; sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled:false">
       <a-assets>
         <audio id="miSonido" src="./photos/ESPACIAL.mp3" preload="auto" ></audio>
         <a-asset-item id="car" src="./photos/model.gltf"></a-asset-item>
+        <img id="my-image" src="./photos/Bowser_1400x.webp">
       </a-assets>
 
       <a-marker style="height: 100%; width: 100%; margin: 0; overflow: hidden;" type="pattern" url="./photos/marker.patt">
          <a-image
           id="profile"
-          width="1"
-          height="1"
+          width="2"
+          height="2"
           position="1 0 0"
           rotation="-100 0 0"
-          src="./photos/Bowser_1400x.webp"
+          src="#my-image"
           link="href: https://www.google.com/"
         ></a-image>
         <a-entity id="sonido" sound="src: #miSonido"  position="0 0 -0.5" ></a-entity>
@@ -42,5 +54,6 @@
       </a-marker>
       <a-entity camera  cursor="fuse: false; rayOrigin:mouse;"></a-entity>
     </a-scene>
+    <div id="div-overlay" >Apunta nuevamente al QR</div>
   </body>
 </html>
