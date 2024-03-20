@@ -14,13 +14,13 @@ function gameLoop() {
 
 
   marker.addEventListener("markerFound", function () {
-    sound.components.sound.data.loop = true;
-    sound.components.sound.playSound();
+    //sound.components.sound.data.loop = true;
+    //sound.components.sound.playSound();
     divOverlay.style.visibility = 'hidden'
   });
 
   marker.addEventListener("markerLost", function () {
-    sound.components.sound.stopSound();
+   // sound.components.sound.stopSound();
     divOverlay.style.visibility = 'visible'
   });
 }
