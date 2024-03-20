@@ -11,7 +11,10 @@ function gameLoop() {
   let instagram = document.getElementById('instagram'); 
   let pdf = document.getElementById('pdf'); 
   let webPage = document.getElementById('webPage'); 
-
+  whatsapp.style.visibility = 'hidden'
+  instagram.style.visibility = 'hidden'
+  pdf.style.visibility = 'hidden'
+  webPage.style.visibility = 'hidden'
   
 
 
