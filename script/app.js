@@ -9,14 +9,14 @@ function gameLoop() {
   let divOverlay = document.getElementById('div-overlay'); 
   let whatsapp = document.getElementById('whatsapp'); 
   let instagram = document.getElementById('instagram'); 
-  let pdf = document.getElementById('pdf'); 
+  let bot = document.getElementById('bot'); 
   let webPage = document.getElementById('webPage'); 
   whatsapp.style.visibility = 'hidden'
   instagram.style.visibility = 'hidden'
-  pdf.style.visibility = 'hidden'
+  bot.style.visibility = 'hidden'
   webPage.style.visibility = 'hidden'
   
-
+  
 
   marker.addEventListener("markerFound", function () {
     //sound.components.sound.data.loop = true;
@@ -24,7 +24,7 @@ function gameLoop() {
     divOverlay.style.visibility = 'hidden'
     whatsapp.style.visibility = 'visible'
     instagram.style.visibility = 'visible'
-    pdf.style.visibility = 'visible'
+    bot.style.visibility = 'visible'
     webPage.style.visibility = 'visible'
   });
 
@@ -33,7 +33,7 @@ function gameLoop() {
     divOverlay.style.visibility = 'visible'
     whatsapp.style.visibility = 'hidden'
     instagram.style.visibility = 'hidden'
-    pdf.style.visibility = 'hidden'
+    bot.style.visibility = 'hidden'
     webPage.style.visibility = 'hidden'
   });
 }
