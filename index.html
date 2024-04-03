@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
+
     <title>Document</title>
     <script src="./script/aframe.min.js"></script>
     <script src="./script/aframe-ar.js"></script>
-    <script src="./script/app.js"></script> 
+    <script src="./script/app.js"></script>
     <style>
       #div-overlay {
         position: absolute;
@@ -28,8 +28,6 @@
         height: 50px;
         z-index: 9999;
         padding: 10px;
-        
-        
       }
       #instagram {
         position: absolute;
@@ -39,8 +37,6 @@
         height: 50px;
         z-index: 9999;
         padding: 10px;
-        
-        
       }
       #bot {
         position: absolute;
@@ -50,8 +46,6 @@
         height: 50px;
         z-index: 9999;
         padding: 10px;
-        
-        
       }
       #webPage {
         position: absolute;
@@ -60,25 +54,34 @@
         transform: translate(-50%, -50%);
         z-index: 9999;
         width: 50%;
-        
+
         padding: 10px 20px;
         background-color: #111111;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
-        
       }
     </style>
   </head>
-  <body style="height: 100%; width: 100%; margin: 0; overflow: hidden;">
-    <a-scene   embedded id="scene"  embedded arjs="patternRatio:0.80; sourceWidth:1280; sourceHeight:960; sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled:false">
+  <body style="height: 100%; width: 100%; margin: 0; overflow: hidden">
+    <a-scene
+      embedded
+      id="scene"
+      embedded
+      arjs="patternRatio:0.80; sourceWidth:1280; sourceHeight:960; sourceType: webcam; debugUIEnabled: false;"
+      vr-mode-ui="enabled:false"
+    >
       <a-assets>
-        <audio id="miSonido" src="./photos/ESPACIAL.mp3" preload="auto" ></audio>
+        <audio id="miSonido" src="./photos/ESPACIAL.mp3" preload="auto"></audio>
         <a-asset-item id="car" src="./photos/model.gltf"></a-asset-item>
       </a-assets>
 
-      <a-marker style="height: 100%; width: 100%; margin: 0; overflow: hidden;" type="pattern" url="./photos/marker.patt">
+      <a-marker
+        style="height: 100%; width: 100%; margin: 0; overflow: hidden"
+        type="pattern"
+        url="./photos/marker.patt"
+      >
         <!--  <a-image
           id="profile"
           width="0.3"
@@ -99,20 +102,21 @@
             rotation="100 0 0"
           ></a-entity>
         </a-entity>
-        
       </a-marker>
-      <a-entity camera  cursor="fuse: false; rayOrigin:mouse;"></a-entity>
+      <a-entity camera cursor="fuse: false; rayOrigin:mouse;"></a-entity>
     </a-scene>
-    <div id="div-overlay" >Apunta nuevamente al QR</div>
+    <div id="div-overlay">Apunta nuevamente al QR</div>
     <a href="https://www.ejemplo.com">
-      <img id="whatsapp" src="./photos/whatsapp.png">
+      <img id="whatsapp" src="./photos/whatsapp.png" />
     </a>
     <a href="https://www.ejemplo.com">
-      <img id="instagram" src="./photos/instagram.png">
+      <img id="instagram" src="./photos/instagram.png" />
     </a>
-    <a href="https://www.ejemplo.com">
-      <img id="bot" src="./photos/bot.png">
+    <a href="./assets/DossierKp.pdf">
+      <img id="bot" src="./photos/bot.png" />
     </a>
-    <a  href="https://www.ejemplo.com"><img id="webPage" src="./photos/kiklos.png"></a>
+    <a href="https://www.ejemplo.com"
+      ><img id="webPage" src="./photos/kiklos.png"
+    /></a>
   </body>
 </html>
