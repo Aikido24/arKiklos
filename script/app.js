@@ -13,8 +13,8 @@ function gameLoop() {
   whatsapp.style.visibility = "hidden";
   instagram.style.visibility = "hidden";
   bot.style.visibility = "hidden";
-  webPage.style.visibility = "visible";
-  webPage1.style.visibility = "visible";
+  webPage.style.visibility = "hidden";
+  webPage1.style.visibility = "hidden";
 
   marker.addEventListener("markerFound", function () {
     //sound.components.sound.data.loop = true;
